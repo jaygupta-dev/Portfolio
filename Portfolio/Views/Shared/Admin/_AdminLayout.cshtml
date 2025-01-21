@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link rel="icon" href="~/images/others/portfolio_logo.png" type="image/png" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="@Url.Content("~/Admin/assets/css/bootstrap.min.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/admin/assets/css/responsive.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/Admin/assets/css/colors.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/Admin/assets/css/bootstrap-select.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/Admin/assets/css/perfect-scrollbar.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/admin/assets/css/style-admin.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/admin/assets/css/responsive.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/admin/assets/css/custom.css")" />
+
+</head>
+<body class="dashboard dashboard_1">
+    <div class="full_container">
+        <div class="inner_container">
+            @{
+                Html.RenderPartial("~/Views/Shared/Admin/_PartialSidebar.cshtml");
+            }
+
+        <div id="content">
+            @{
+                Html.RenderPartial("~/Views/Shared/Admin/_PartialHeader.cshtml");
+            }
+            <div class="midde_cont">
+        <div>
+        @RenderBody()
+        </div>
+            @{
+                Html.RenderPartial("~/Views/Shared/Admin/_PartialFooter.cshtml");
+            }
+        </div>
+     </div>
+
+
+    </div>
+    </div>
+
+    <script src="~/Admin/assets/js/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="~/Admin/assets/js/popper.min.js"></script>
+    <script src="~/Admin/assets/js/bootstrap.min.js"></script>
+    <script src="~/Admin/assets/js/animate.js"></script>
+    <script src="~/Admin/assets/js/bootstrap-select.js"></script>
+    <script src="~/Admin/assets/js/owl.carousel.js"></script>
+    <script src="~/Admin/assets/js/Chart.min.js"></script>
+    <script src="~/Admin/assets/js/Chart.bundle.min.js"></script>
+    <script src="~/Admin/assets/js/utils.js"></script>
+    <script src="~/Admin/assets/js/analyser.js"></script>
+    <script src="~/Admin/assets/js/perfect-scrollbar.min.js"></script>
+    <script>
+        var ps = new PerfectScrollbar('#sidebar');
+    </script>
+    <script src="~/Admin/assets/js/custom.js"></script>
+    <script src="~/Admin/assets/js/chart_custom_style1.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

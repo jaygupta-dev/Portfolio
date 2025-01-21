@@ -1,0 +1,280 @@
+﻿@model List<DataAccessLayer.ModelLayer.SkillModel>
+@{
+    ViewData["Title"] = "TechnicalSkill";
+    Layout = "~/Views/Shared/Admin/_AdminLayout.cshtml";
+}
+
+@{
+    var skillList = Model;
+}
+
+<div class="container-fluid">
+    <div class="row column_title">
+        <div class="col-md-12">
+            <div class="page_title">
+                <div><h2 class="mr-5 d-inline">Manage Skills</h2><h5 class="text-success ml-5 d-inline text-capitalize">@TempData["message"]</h5></div>
+                <h4 class="mt-2 mb-0 pb-0"><button class="btn btn-danger" id="addNewWebForm">Add New</button></h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- form row -->
+    <div class="row" id="webPageForm">
+        <!-- table section -->
+        <div class="col-md-12">
+            <div class="white_shd full margin_bottom_30">
+                <div class="full graph_head">
+                    <div class="heading1 margin_0">
+                        <h2>Add Skills</h2>
+                    </div>
+                </div>
+                <div class="table_section padding_infor_info">
+                    <form method="post" enctype="multipart/form-data" action="/Admin/TechnicalSkill" id="form-skill">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Skill Category<span class="text-danger">*</span></label>
+                                <select name="SkillCategory" id="SkillCategory" class="form-control">
+                                    <option value="">--select--</option>
+                                    <option value="frontend">Frontend</option>
+                                    <option value="backend">Backend</option>
+                                    <option value="database">Database</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label>Skill Name<span class="text-danger">*</span></label>
+                                <input name="SkillName" id="SkillName" class="form-control" placeholder="Enter Skill Name" />
+                            </div>
+                            <div class="col-md-4">
+                                <label>Skill Level: <span id="skillLevel">10</span>%</label>
+                                <input type="range" id="skillSlider" name="skillLevel" class="form-range" min="0" max="100" step="1" value="10" />
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12"><button type="submit" class="btn btn-success">SAVE</button></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- table section -->
+    <div class="row" id="webPageTable">
+        <div class="col-md-12">
+            <div class="white_shd full margin_bottom_30">
+                <div class="full graph_head">
+                    <div class="heading1 margin_0">
+                        <h2>WebPages Lists</h2>
+                    </div>
+                </div>
+                <div class="table_section padding_infor_info">
+                    <div class="table-responsive-sm">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Skill ID</th>
+                                    <th>Skill Category</th>
+                                    <th>Skill Name</th>
+                                    <th>Skill Level</th>
+                                    <th>Modify</th>
+                                    <th>Is Active</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (skillList != null)
+                                {
+                                    int i = 1;
+                                    @foreach (var item in skillList)
+                                    {
+                                        <tr id="tr_@i">
+                                            <td style="width:100px;"><input type="text" name="" id="" value="@i" class="form-control" readonly /></td>
+
+                                            <td style="width:100px;"><input type="text" name="Id" id="Id" value="@item.Id" class="form-control" readonly /> 
+                                            </td>
+                                            <td>
+                                               @*  <input type="text" name="SkillCategory" id="SkillCategory" value="@item.SkillCategory" class="form-control" disabled /> *@
+                                                <select name="SkillCategory" id="SkillCategory" class="form-control" asp-for="@item.SkillCategory" disabled>
+                                                    <option value="">--select--</option>
+                                                    <option value="frontend">Frontend</option>
+                                                    <option value="backend">Backend</option>
+                                                    <option value="database">Database</option>
+                                                    <option value="others">Others</option>
+                                                </select>
+                                            </td>
+
+                                            <td>
+                                                <input type="text" name="SkillName" id="SkillName" value="@item.SkillName" class="form-control" disabled />
+                                            </td>
+                                            <td>
+                                                <input type="text" name="SkillLevel" id="SkillLevel" value="@item.SkillLevel" class="form-control" disabled />
+                                            </td>
+
+                                            <td class="edit_td_@i">
+                                                <div class="edit-div">
+                                                    <button class="btn @(item.IsActive == true ? "bg-primary" : "bg-secondary") text-light rounded rounded-5 p-1" @(item.IsActive == false ? "disabled " : "")>Edit</button>
+                                                </div>
+
+                                                <div class="update-div">
+                                                    <button class="btn bg-danger text-light rounded rounded-5 p-1 cancel_row">Cancel</button>
+                                                    <button class="btn bg-warning text-light rounded rounded-5 p-1 update_row">Update</button>
+                                                </div>
+                                            </td>
+                                            @if (@item.IsActive.Equals(true))
+                                            {
+                                                <td><a class="bg-success text-light rounded rounded-5 p-1" href="/Admin/TechnicalSkill?Id=@item.Id&Status=deactivate">Active</a></td>
+                                            }
+                                            @if (@item.IsActive.Equals(false))
+                                            {
+                                                <td><a class="bg-danger text-light rounded rounded-5 p-1" href="/Admin/TechnicalSkill?Id=@item.Id&Status=activate">Inactive</a></td>
+                                            }
+                                            <td>
+                                                @if (item.IsActive == true)
+                                                {
+                                                    <button class="btn bg-secondary text-light rounded rounded-5 p-1">delete</button>
+                                                }
+                                                else
+                                                {
+                                                    <a class="bg-danger text-light rounded rounded-5 p-1" href="/Admin/TechnicalSkill?Id=@item.Id&Status=delete">delete</a>
+                                                }
+                                            </td>
+                                        </tr>
+                                        i++;
+                                    }
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <td><h4>No Data Found</h4></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+@section Scripts {
+
+    <script>
+
+        $(document).ready(function () {
+            $("#webPageForm").hide();
+
+            let currentText = $("#addNewWebForm").text();
+
+            $("#addNewWebForm").click(function () {
+                if (currentText == "Add New") {
+                    $("#webPageForm").show();
+                    $("#addNewWebForm").text("Close");
+                    currentText = "Close";
+                }
+                else {
+                    $("#webPageForm").hide();
+                    $("#addNewWebForm").text("Add New");
+                    currentText = "Add New";
+                }
+            });
+
+
+            $('#skillSlider').on('input', function () {
+                let skillValue = $(this).val();
+                $('#skillLevel').text(skillValue);
+            });
+        });
+
+
+
+        $(document).ready(function () {
+            $("#PageLogo").change(function () {
+                // let img_value = $(this).val();
+                // let arr = img_value.split("\\");
+                // $("#PageLogo").val(arr[2]);
+            });
+
+            $(".update-div").hide();
+            $(".edit-div").show();
+
+            let initialCategoryName;
+
+            $(".bg-primary").click(function () {
+
+                let parentAttr = '.' + $(this).closest('td').attr('class');
+                $(this).closest(".edit-div").hide();
+                $(parentAttr + " .update-div").show();
+
+                let parentTrId = '#' + $(this).closest('tr').attr('id');
+
+                $(parentTrId + " #SkillCategory").attr("disabled", false);
+                $(parentTrId + " #SkillName").attr("disabled", false);
+                $(parentTrId + " #SkillLevel").attr("disabled", false);
+
+                initialSkillCategory = $(parentTrId + " #SkillCategory").val();
+                initialSkillName = $(parentTrId + " #SkillName").val();
+                initialSkillLevel = $(parentTrId + " #SkillLevel").val();
+            });
+
+            $(".cancel_row").click(function () {
+
+                let parentAttr = '.' + $(this).closest('td').attr('class');
+                $(this).closest(".update-div").hide();
+                $(parentAttr + " .edit-div").show();
+
+                let parentTrId = '#' + $(this).closest('tr').attr('id');
+
+                $(parentTrId + " #SkillCategory").attr("disabled", true);
+                $(parentTrId + " #SkillName").attr("disabled", true);
+                $(parentTrId + " #SkillLevel").attr("disabled", true);
+
+                $(parentTrId + " #SkillCategory").val(initialSkillCategory);
+                $(parentTrId + " #SkillName").val(initialSkillName);
+                $(parentTrId + " #SkillLevel").val(initialSkillLevel);
+
+            });
+
+            $(".update_row").click(function () {
+                let parentTrId = '#' + $(this).closest('tr').attr('id');
+
+
+                let formData = new FormData();
+                formData.append("Id", $(parentTrId + " #Id").val());
+                formData.append("SkillCategory", $(parentTrId + " #SkillCategory").val());
+                formData.append("SkillName", $(parentTrId + " #SkillName").val());
+                formData.append("SkillLevel", $(parentTrId + " #SkillLevel").val());
+
+                $.ajax({
+                    url: '/Admin/UpdateSkill',
+                    type: 'POST',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function (response) {
+                        if (response.success) {
+                            location.reload();
+                        } else {
+                            console.log("Update failed: " + response.message);
+                        }
+                    },
+                    error: function (err) {
+                        console.error("Error:", err);
+                    }
+                });
+            });
+
+
+        });
+
+    </script>
+
+}
+
+
+
+

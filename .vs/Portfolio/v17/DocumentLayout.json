@@ -1,0 +1,245 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C4E05604-4091-4CCE-8B7D-3479C93F218F}|Portfolio\\Portfolio.csproj|d:\\jayanendra gupta\\study materialssss\\portfolio\\portfolio\\portfolio\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C4E05604-4091-4CCE-8B7D-3479C93F218F}|Portfolio\\Portfolio.csproj|solutionrelative:portfolio\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4E05604-4091-4CCE-8B7D-3479C93F218F}|Portfolio\\Portfolio.csproj|d:\\jayanendra gupta\\study materialssss\\portfolio\\portfolio\\portfolio\\views\\admin\\technicalskill.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C4E05604-4091-4CCE-8B7D-3479C93F218F}|Portfolio\\Portfolio.csproj|solutionrelative:portfolio\\views\\admin\\technicalskill.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0AE80FA-D6E0-4835-9655-150DD7AD0C3F}|DataAccessLayer\\DataAccessLayer.csproj|d:\\jayanendra gupta\\study materialssss\\portfolio\\portfolio\\dataaccesslayer\\modellayer\\modellayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0AE80FA-D6E0-4835-9655-150DD7AD0C3F}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\modellayer\\modellayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4E05604-4091-4CCE-8B7D-3479C93F218F}|Portfolio\\Portfolio.csproj|d:\\jayanendra gupta\\study materialssss\\portfolio\\portfolio\\portfolio\\wwwroot\\home\\assets\\css\\style-home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C4E05604-4091-4CCE-8B7D-3479C93F218F}|Portfolio\\Portfolio.csproj|solutionrelative:portfolio\\wwwroot\\home\\assets\\css\\style-home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4E05604-4091-4CCE-8B7D-3479C93F218F}|Portfolio\\Portfolio.csproj|d:\\jayanendra gupta\\study materialssss\\portfolio\\portfolio\\portfolio\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4E05604-4091-4CCE-8B7D-3479C93F218F}|Portfolio\\Portfolio.csproj|solutionrelative:portfolio\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4E05604-4091-4CCE-8B7D-3479C93F218F}|Portfolio\\Portfolio.csproj|d:\\jayanendra gupta\\study materialssss\\portfolio\\portfolio\\portfolio\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4E05604-4091-4CCE-8B7D-3479C93F218F}|Portfolio\\Portfolio.csproj|solutionrelative:portfolio\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20D16ECA-C902-466B-A84A-1BCBAC1A4C30}|BusinessLogicLayer\\BusinessLogicLayer.csproj|d:\\jayanendra gupta\\study materialssss\\portfolio\\portfolio\\businesslogiclayer\\repositoryrelation\\repositoryrelation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20D16ECA-C902-466B-A84A-1BCBAC1A4C30}|BusinessLogicLayer\\BusinessLogicLayer.csproj|solutionrelative:businesslogiclayer\\repositoryrelation\\repositoryrelation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20D16ECA-C902-466B-A84A-1BCBAC1A4C30}|BusinessLogicLayer\\BusinessLogicLayer.csproj|d:\\jayanendra gupta\\study materialssss\\portfolio\\portfolio\\businesslogiclayer\\repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20D16ECA-C902-466B-A84A-1BCBAC1A4C30}|BusinessLogicLayer\\BusinessLogicLayer.csproj|solutionrelative:businesslogiclayer\\repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4E05604-4091-4CCE-8B7D-3479C93F218F}|Portfolio\\Portfolio.csproj|d:\\jayanendra gupta\\study materialssss\\portfolio\\portfolio\\portfolio\\wwwroot\\admin\\assets\\css\\custom.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C4E05604-4091-4CCE-8B7D-3479C93F218F}|Portfolio\\Portfolio.csproj|solutionrelative:portfolio\\wwwroot\\admin\\assets\\css\\custom.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4E05604-4091-4CCE-8B7D-3479C93F218F}|Portfolio\\Portfolio.csproj|d:\\jayanendra gupta\\study materialssss\\portfolio\\portfolio\\portfolio\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C4E05604-4091-4CCE-8B7D-3479C93F218F}|Portfolio\\Portfolio.csproj|solutionrelative:portfolio\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4E05604-4091-4CCE-8B7D-3479C93F218F}|Portfolio\\Portfolio.csproj|d:\\jayanendra gupta\\study materialssss\\portfolio\\portfolio\\portfolio\\views\\shared\\admin\\_partialsidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C4E05604-4091-4CCE-8B7D-3479C93F218F}|Portfolio\\Portfolio.csproj|solutionrelative:portfolio\\views\\shared\\admin\\_partialsidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4E05604-4091-4CCE-8B7D-3479C93F218F}|Portfolio\\Portfolio.csproj|d:\\jayanendra gupta\\study materialssss\\portfolio\\portfolio\\portfolio\\views\\admin\\webpages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C4E05604-4091-4CCE-8B7D-3479C93F218F}|Portfolio\\Portfolio.csproj|solutionrelative:portfolio\\views\\admin\\webpages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "custom.css",
+              "DocumentMoniker": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\wwwroot\\Admin\\assets\\css\\custom.css",
+              "RelativeDocumentMoniker": "Portfolio\\wwwroot\\Admin\\assets\\css\\custom.css",
+              "ToolTip": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\wwwroot\\Admin\\assets\\css\\custom.css",
+              "RelativeToolTip": "Portfolio\\wwwroot\\Admin\\assets\\css\\custom.css",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-01-19T18:04:45.337Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Portfolio\\Controllers\\AdminController.cs",
+              "ToolTip": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Portfolio\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAxwEcAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T18:05:30.191Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\Views\\Admin\\Index.cshtml",
+              "RelativeDocumentMoniker": "Portfolio\\Views\\Admin\\Index.cshtml",
+              "ToolTip": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\Views\\Admin\\Index.cshtml",
+              "RelativeToolTip": "Portfolio\\Views\\Admin\\Index.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADUAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-19T18:06:20.402Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RepositoryRelation.cs",
+              "DocumentMoniker": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\BusinessLogicLayer\\RepositoryRelation\\RepositoryRelation.cs",
+              "RelativeDocumentMoniker": "BusinessLogicLayer\\RepositoryRelation\\RepositoryRelation.cs",
+              "ToolTip": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\BusinessLogicLayer\\RepositoryRelation\\RepositoryRelation.cs",
+              "RelativeToolTip": "BusinessLogicLayer\\RepositoryRelation\\RepositoryRelation.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAgwD4AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T18:12:29.93Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\BusinessLogicLayer\\Repository\\Repository.cs",
+              "RelativeDocumentMoniker": "BusinessLogicLayer\\Repository\\Repository.cs",
+              "ToolTip": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\BusinessLogicLayer\\Repository\\Repository.cs",
+              "RelativeToolTip": "BusinessLogicLayer\\Repository\\Repository.cs",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAYwOUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T18:12:35.014Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "WebPages.cshtml",
+              "DocumentMoniker": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\Views\\Admin\\WebPages.cshtml",
+              "RelativeDocumentMoniker": "Portfolio\\Views\\Admin\\WebPages.cshtml",
+              "ToolTip": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\Views\\Admin\\WebPages.cshtml",
+              "RelativeToolTip": "Portfolio\\Views\\Admin\\WebPages.cshtml",
+              "ViewState": "AgIAANoAAAAAAAAAAAAUwPwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-19T18:28:07.168Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_PartialSidebar.cshtml",
+              "DocumentMoniker": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\Views\\Shared\\Admin\\_PartialSidebar.cshtml",
+              "RelativeDocumentMoniker": "Portfolio\\Views\\Shared\\Admin\\_PartialSidebar.cshtml",
+              "ToolTip": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\Views\\Shared\\Admin\\_PartialSidebar.cshtml",
+              "RelativeToolTip": "Portfolio\\Views\\Shared\\Admin\\_PartialSidebar.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACIAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-19T18:49:07.044Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Portfolio\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Portfolio\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T18:49:18.839Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Portfolio\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Portfolio\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowC8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-20T18:49:48.527Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ModelLayer.cs",
+              "DocumentMoniker": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\DataAccessLayer\\ModelLayer\\ModelLayer.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\ModelLayer\\ModelLayer.cs",
+              "ToolTip": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\DataAccessLayer\\ModelLayer\\ModelLayer.cs",
+              "RelativeToolTip": "DataAccessLayer\\ModelLayer\\ModelLayer.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAA6wC4AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T19:37:19.72Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TechnicalSkill.cshtml",
+              "DocumentMoniker": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\Views\\Admin\\TechnicalSkill.cshtml",
+              "RelativeDocumentMoniker": "Portfolio\\Views\\Admin\\TechnicalSkill.cshtml",
+              "ToolTip": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\Views\\Admin\\TechnicalSkill.cshtml",
+              "RelativeToolTip": "Portfolio\\Views\\Admin\\TechnicalSkill.cshtml",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAAAGcAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-21T15:35:36.819Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "style-home.css",
+              "DocumentMoniker": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\wwwroot\\Home\\assets\\css\\style-home.css",
+              "RelativeDocumentMoniker": "Portfolio\\wwwroot\\Home\\assets\\css\\style-home.css",
+              "ToolTip": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\wwwroot\\Home\\assets\\css\\style-home.css",
+              "RelativeToolTip": "Portfolio\\wwwroot\\Home\\assets\\css\\style-home.css",
+              "ViewState": "AgIAAHkCAAAAAAAAAAAUwKsCAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-01-21T17:15:44.901Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

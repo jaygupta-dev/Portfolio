@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    <title>@ViewData["Title"]</title>
+    <meta name="title" content="@ViewData["MetaTitle"]" />
+    <meta name="keywords" content="@ViewData["MetaKeyword"]" />
+    <meta name="description" content="@ViewData["MetaDescription"]" />
+    <link rel="icon" href="@ViewData["FaviconUrl"]" />
+
+
+    <link href="~/Home/assets/css/templatemo-style.css" rel="stylesheet" />
+    <link href="~/Home/assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Home/assets/css/style-home.css" rel="stylesheet" />
+
+</head>
+<body>
+    @{
+        Html.RenderPartial("~/Views/Shared/Home/_PartialHeader.cshtml");
+    }
+    <div>
+        @RenderBody()
+    </div>
+    @{
+        Html.RenderPartial("~/Views/Shared/Home/_PartialFooter.cshtml");
+    }
+
+    <script src="~/Home/assets/js/bootstrap.js"></script>
+    <script src="~/Home/assets/js/jquery.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#sign-in").hide();
+
+            $("#admin-Login").on('input', function () {
+                let currentValue = $(this).val().trim().toLowerCase();
+
+                if (currentValue === "jayanendra") {
+                    $("#sign-in").show();
+                    $("#admin-Login").hide();
+                }
+                else {
+                    $("#sign-in").hide();
+                    $("#admin-Login").show();
+                }
+            });
+            saveIpInfo();
+
+            function saveIpInfo() {
+                $.ajax({
+                    url: "/Home/SaveIpAddress",
+                    //type: "POST",
+                    success: function (data) {
+                        console.log("Data saved successfully:", data);
+                    },
+                    error: function (err) {
+                        console.error("Error occurred:", err);
+                    }
+                });
+            }
+
+
+        });
+    </script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

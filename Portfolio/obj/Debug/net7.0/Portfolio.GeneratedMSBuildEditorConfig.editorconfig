@@ -1,0 +1,99 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Portfolio
+build_property.RootNamespace = Portfolio
+build_property.ProjectDir = D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\Portfolio\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\Portfolio
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/JAYANENDRA GUPTA/STUDY MATERIALSsss/Portfolio/Portfolio/Portfolio/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JAYANENDRA GUPTA/STUDY MATERIALSsss/Portfolio/Portfolio/Portfolio/Pages/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JAYANENDRA GUPTA/STUDY MATERIALSsss/Portfolio/Portfolio/Portfolio/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JAYANENDRA GUPTA/STUDY MATERIALSsss/Portfolio/Portfolio/Portfolio/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JAYANENDRA GUPTA/STUDY MATERIALSsss/Portfolio/Portfolio/Portfolio/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JAYANENDRA GUPTA/STUDY MATERIALSsss/Portfolio/Portfolio/Portfolio/Views/Admin/TechnicalSkill.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVGVjaG5pY2FsU2tpbGwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JAYANENDRA GUPTA/STUDY MATERIALSsss/Portfolio/Portfolio/Portfolio/Views/Admin/WebPages.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cV2ViUGFnZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JAYANENDRA GUPTA/STUDY MATERIALSsss/Portfolio/Portfolio/Portfolio/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JAYANENDRA GUPTA/STUDY MATERIALSsss/Portfolio/Portfolio/Portfolio/Views/Shared/Admin/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFkbWluXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JAYANENDRA GUPTA/STUDY MATERIALSsss/Portfolio/Portfolio/Portfolio/Views/Shared/Admin/_PartialFooter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFkbWluXF9QYXJ0aWFsRm9vdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JAYANENDRA GUPTA/STUDY MATERIALSsss/Portfolio/Portfolio/Portfolio/Views/Shared/Admin/_PartialHeader.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFkbWluXF9QYXJ0aWFsSGVhZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JAYANENDRA GUPTA/STUDY MATERIALSsss/Portfolio/Portfolio/Portfolio/Views/Shared/Admin/_PartialSidebar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFkbWluXF9QYXJ0aWFsU2lkZWJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JAYANENDRA GUPTA/STUDY MATERIALSsss/Portfolio/Portfolio/Portfolio/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JAYANENDRA GUPTA/STUDY MATERIALSsss/Portfolio/Portfolio/Portfolio/Views/Shared/Home/_HomeLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEhvbWVcX0hvbWVMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JAYANENDRA GUPTA/STUDY MATERIALSsss/Portfolio/Portfolio/Portfolio/Views/Shared/Home/_PartialFooter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEhvbWVcX1BhcnRpYWxGb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JAYANENDRA GUPTA/STUDY MATERIALSsss/Portfolio/Portfolio/Portfolio/Views/Shared/Home/_PartialHeader.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEhvbWVcX1BhcnRpYWxIZWFkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JAYANENDRA GUPTA/STUDY MATERIALSsss/Portfolio/Portfolio/Portfolio/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JAYANENDRA GUPTA/STUDY MATERIALSsss/Portfolio/Portfolio/Portfolio/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JAYANENDRA GUPTA/STUDY MATERIALSsss/Portfolio/Portfolio/Portfolio/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JAYANENDRA GUPTA/STUDY MATERIALSsss/Portfolio/Portfolio/Portfolio/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-0aq0x0b44y

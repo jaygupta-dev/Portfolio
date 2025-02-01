@@ -3,13 +3,13 @@
     <div class="sidebar_blog_1">
         <div class="sidebar-header">
             <div class="logo_section">
-                <a href="/Admin/Dashboard"><img class="logo_icon img-responsive" src="@Url.Content("~/Admin/images/logo/logo_icon.png")" alt="#" /></a>
+                <a href="/Admin/Dashboard"><img class="logo_icon img-responsive" src="@Url.Content("~/images/jaydeveloper.jpg")" alt="#" /></a>
             </div>
         </div>
         <div class="sidebar_user_info">
             <div class="icon_setting"></div>
             <div class="user_profle_side">
-                <div class="user_img"><img class="img-responsive" src="@Url.Content("~/Images/Others/jaydeveloper.jpg")" alt="#" /></div>
+                <div class="user_img"><img class="img-responsive" src="@Url.Content("~/images/jaydeveloper.jpg")" alt="#" /></div>
                 <div class="user_info">
                     @if (@ViewBag.LoginUser != null)
                     {
@@ -33,16 +33,12 @@
                 <ul class="collapse list-unstyled" id="element">
                     <li><a href="/Admin/WebPages">> <span>Web Pages</span></a></li>
                     <li><a href="/Admin/TechnicalSkill">> <span>Technical Skill</span></a></li>
-                    <li><a href="/Admin/PostCategory">> <span>Post Category</span></a></li>
-                    <li><a href="/Admin/Projects">> <span>Projects</span></a></li>
-                    <li><a href="/Admin/ProjectsContent">> <span>Projects Content</span></a></li>
-                    <li><a href="/Admin/SocialUrlLink">> <span>Social Profile</span></a></li>
-                    <li><a href="/Admin/GetEnquiryFrom">> <span>Get Enquiry List</span></a></li>
                     <li><a href="/Admin/WebsiteMeta">> <span>Website Meta</span></a></li>
-                    <li><a href="/Admin/GetIPData">> <span>Get Activity</span></a></li>
-
-                    <li><a href="/Admin/PostContent">> <span>Post Content</span></a></li>
-                    <li><a href="/Admin/ContentImage">> <span>Post Content and Images</span></a></li>
+                    <li><a href="/Admin/GetEnquiryFrom">> <span>Get Enquiry List</span></a></li>
+                    <li><a href="/Admin/SocialUrlLink">> <span>Social Profile</span></a></li>
+                    @* <li><a href="/Admin/Projects">> <span>Projects</span></a></li>
+                    <li><a href="/Admin/ProjectsContent">> <span>Projects Content</span></a></li>
+                    <li><a href="/Admin/GetIPData">> <span>Get Activity</span></a></li> *@
                 </ul>
             </li>
         </ul>

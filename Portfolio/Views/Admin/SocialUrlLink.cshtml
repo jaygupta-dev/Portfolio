@@ -1,0 +1,264 @@
+﻿@using DataAccessLayer.ModelLayer
+@model List<SocialProfileModel>
+@{
+    ViewData["Title"] = "SocialUrlLink";
+    Layout = "~/Views/Shared/Admin/_AdminLayout.cshtml";
+}
+
+@{
+    var WebPageLists = @ViewBag.WebPages;
+    var SocailProfileLists = Model;
+}
+
+
+<div class="container-fluid">
+    <div class="row column_title">
+        <div class="col-md-12">
+            <div class="page_title">
+                <div class="d-flex"><h2 class="mr-5">Manage Socail Profile</h2><h4 class="ml-5 text-success">@ViewBag.message</h4></div>
+                <h4 class="mt-2 mb-0 pb-0"><button class="btn btn-danger" id="addNewWebForm">Add New</button></h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" id="webPageForm">
+        <div class="col-md-12">
+            <div class="white_shd full margin_bottom_30">
+                <div class="full graph_head">
+                    <div class="heading1 margin_0">
+                        <h2>Add Profile</h2>
+                    </div>
+                </div>
+                <div class="table_section padding_infor_info">
+
+                    <form method="post" enctype="multipart/form-data" action="/Admin/SocialUrlLink">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Socail Url</label>
+                                <input type="text" name="UrlLink" id="UrlLink" class="form-control" />
+                            </div>
+                            <div class="col-md-3">
+                                <label>Url Text</label>
+                                <input type="text" name="UrlText" id="UrlText" class="form-control" />
+                            </div>
+                            <div class="col-md-3">
+                                <label>Social Profile Icon</label>
+                                <input type="file" name="SocialProfileIcon" id="SocailProfileIcon" class="form-control" />
+                            </div>                       
+                        </div>
+                        <div class="row mt-3">
+                            <input type="hidden" name="ActionType" value="INSERT" />
+                            <div class="col-10"><button type="submit" class="btn btn-success saveBtn">SAVE</button></div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" id="webPageTable">
+        <div class="col-md-12">
+            <div class="white_shd full margin_bottom_30">
+                <div class="full graph_head">
+                    <div class="heading1 margin_0">
+                        <h2>Social Profile Lists</h2>
+                    </div>
+                </div>
+                <div class="table_section padding_infor_info">
+                    <div class="table-responsive-sm">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Profile ID</th>
+                                    <th>Social URL</th>
+                                    <th>URL Text</th>
+                                    <th>Icon</th>
+                                    <th>Active/De-Active</th>
+                                    <th>Edit/Update</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (SocailProfileLists != null && SocailProfileLists.Count > 0)
+                                {
+                                    int i = 1;
+                                    foreach (var item in SocailProfileLists)
+                                    {
+                                        <tr id="tr_@item.Id">
+                                            <td style="width:100px;"><input type="text" disabled value="@i" class="form-control" /></td>
+                                            <td class="id" style="width:100px;"><input type="text" readonly value="@item.Id" id="Id" name="Id" class="form-control" /></td>
+                                            <td><input type="text" readonly value="@item.UrlLink" class="form-control" name="UrlLink" id="UrlLink" /></td>
+                                            <td><input type="text" readonly value="@item.UrlText" class="form-control" name="UrlText" id="UrlText" /></td>
+
+                                            <td>
+                                                
+                                                @* <img src="@Url.Content("~/Images/SocialIcon/" + item.SocialProfileIconPath)" height="30" /> *@
+
+
+                                                <input type="file" name="SocialProfileIcon" id="SocialProfileIcon" class="form-control w-75 PageLogo d-none" />
+
+                                                @if (!string.IsNullOrEmpty(@item.SocialProfileIconPath))
+                                                {
+                                                    <img src="@Url.Content("~/images/SocialIcon/")@item.SocialProfileIconPath" height="50" class="d-inline" />
+                                                }
+                                                <input type="hidden" name="SocialProfileIconPath" id="SocialProfileIconPath" value="@item.SocialProfileIconPath" class="form-control w-50 PageLogoPath" readonly />
+                                            
+                                            </td>
+
+                                            @if (@item.IsActive.Equals(true))
+                                            {
+                                                <td><a class="bg-success text-light rounded rounded-5 p-1" href="/Admin/SocialUrlLink?Id=@item.Id&ActionType=deactivate">Active</a></td>
+                                            }
+                                            @if (@item.IsActive.Equals(false))
+                                            {
+                                                <td><a class="bg-danger text-light rounded rounded-5 p-1" href="/Admin/SocialUrlLink?Id=@item.Id&ActionType=activate">Inactive</a></td>
+                                            }
+                                            <td class="edit_td_@i">
+                                                <div class="edit-div">
+                                                    <button class="btn @(item.IsActive == true ? "bg-primary" : "bg-secondary") text-light rounded rounded-5 p-1" @(item.IsActive == false ? "disabled " : "")>Edit</button>
+                                                </div>
+
+                                                <div class="update-div">
+                                                    <button class="btn bg-danger text-light rounded rounded-5 p-1 cancel_row">Cancel</button>
+                                                    <button class="btn bg-warning text-light rounded rounded-5 p-1 update_row">Update</button>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                @if (item.IsActive == true)
+                                                {
+                                                    <button class="btn bg-secondary text-light rounded rounded-5 p-1">delete</button>
+                                                }
+                                                else
+                                                {
+                                                    <a class="bg-danger text-light rounded rounded-5 p-1" href="/Admin/SocialUrlLink?Id=@item.Id&ActionType=delete">delete</a>
+                                                }
+                                            </td>
+
+                                        </tr>
+
+                                        i++;
+                                    }
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td><button class="btn btn-primary btnActive" style="display:none;">Active</button></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#webPageForm").hide();
+
+            let currentText = $("#addNewWebForm").text();
+
+            $("#addNewWebForm").click(function () {
+                if (currentText == "Add New") {
+                    $("#webPageForm").show();
+                    $("#addNewWebForm").text("Close");
+                    currentText = "Close";
+                }
+                else {
+                    $("#webPageForm").hide();
+                    $("#addNewWebForm").text("Add New");
+                    currentText = "Add New";
+                }
+            });
+        });
+
+        $(document).ready(function(){
+            $(".update-div").hide();
+            $(".edit-div").show();
+
+            let initialCategoryName;
+
+            $(".bg-primary").click(function () {
+
+                let parentAttr = '.' + $(this).closest('td').attr('class');
+                $(this).closest(".edit-div").hide();
+                $(parentAttr + " .update-div").show();
+
+                let parentTrId = '#' + $(this).closest('tr').attr('id');
+
+                $(parentTrId + " #UrlLink").attr("readonly", false);
+                $(parentTrId + " #UrlText").attr("readonly", false);
+                $(parentTrId + " #SocialProfileIcon").removeClass("d-none");
+
+                initialUrlLink = $(parentTrId + " #UrlLink").val();
+                initialUrlText = $(parentTrId + " #UrlText").val();
+            });
+
+            $(".cancel_row").click(function () {
+
+                let parentAttr = '.' + $(this).closest('td').attr('class');
+                $(this).closest(".update-div").hide();
+                $(parentAttr + " .edit-div").show();
+
+                let parentTrId = '#' + $(this).closest('tr').attr('id');
+
+                $(parentTrId + " #UrlLink").attr("readonly", true);
+                $(parentTrId + " #UrlText").attr("readonly", true);
+                $(parentTrId + " #SocialProfileIcon").addClass("d-none");
+
+                $(parentTrId + " #UrlLink").val(initialUrlLink);
+                $(parentTrId + " #UrlText").val(initialUrlText);
+
+            });
+
+            $(".update_row").click(function () {
+                let parentTrId = '#' + $(this).closest('tr').attr('id');
+
+                var fileInput = $(parentTrId + " #SocialProfileIcon")[0];
+                var file = null;
+                if (fileInput && fileInput.files.length > 0) {
+                    file = fileInput.files[0];
+                }
+
+                let formData = new FormData();
+                formData.append("Id", $(parentTrId + " #Id").val());
+                formData.append("UrlLink", $(parentTrId + " #UrlLink").val());
+                formData.append("UrlText", $(parentTrId + " #UrlText").val());
+                if (file) {
+                    formData.append("SocialProfileIcon", file);
+                }
+
+                $.ajax({
+                    url: '/Admin/UpdateSocialUrl',
+                    type: 'POST',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function (response) {
+                        if (response.success) {
+                            location.reload();
+                        } else {
+                            console.log("Update failed: " + response.message);
+                        }
+                    },
+                    error: function (err) {
+                        console.error("Error:", err);
+                    }
+                });
+            });
+        });
+
+    </script>
+
+}
+
+
+

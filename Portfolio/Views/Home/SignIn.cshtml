@@ -1,0 +1,103 @@
+﻿
+@{
+    ViewData["Title"] = "SignIn";
+    Layout = "~/Views/Shared/Home/_HomeLayout.cshtml";
+}
+<!-- Custom Styles -->
+<style>
+    @@keyframes gradientAnimation {
+        0% {
+            background: linear-gradient(45deg, #a0c4ff, #ffb3b3);
+        }
+
+        10% {
+            background: linear-gradient(45deg, #ffeb3b, #ffb74d);
+        }
+
+        20% {
+            background: linear-gradient(45deg, #ffccbc, #ffb3e6);
+        }
+
+        30% {
+            background: linear-gradient(45deg, #c8e6c9, #c5e1a5);
+        }
+
+        40% {
+            background: linear-gradient(45deg, #ffccff, #b3e5fc);
+        }
+
+        50% {
+            background: linear-gradient(45deg, #ffb3e6, #a7ffeb);
+        }
+
+        60% {
+            background: linear-gradient(45deg, #ffe0b2, #ffcc80);
+        }
+
+        70% {
+            background: linear-gradient(45deg, #b3e5fc, #81d4fa);
+        }
+
+        80% {
+            background: linear-gradient(45deg, #d1c4e9, #ffab91);
+        }
+
+        90% {
+            background: linear-gradient(45deg, #f8bbd0, #d1c4e9);
+        }
+
+        100% {
+            background: linear-gradient(45deg, #a0c4ff, #ffb3b3);
+        }
+    }
+
+    .tm-content-box {
+        padding: 20px;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .tm-btn {
+        background-color: #007bff;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        width: 100%;
+    }
+
+        .tm-btn:hover {
+            background-color: #0056b3;
+        }
+
+    .tm-text-link {
+        color: #007bff;
+    }
+
+    .container-fluid{
+        max-width:100vw !important;
+    }
+</style>
+
+<div class="container-fluid" style="height:100vh;margin:0px 0px 0px 0px; background: linear-gradient(45deg, #a0c4ff, #ffb3b3); animation: gradientAnimation 10s ease infinite;">
+    <div style="display:flex;justify-content:center;width:100%;margin-top:80px;">
+        <div class="col-md-6 col-lg-4 tm-content-box" style="padding:10px;border:1px solid lightgrey;border-radius:5px;background-color: rgba(255, 255, 255, 0.8);">
+            <h2 class="tm-title text-center">Login</h2>
+            <form action="/Home/SignIn">
+                <div class="form-group tm-margin-b-20">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required>
+                </div>
+                <div class="form-group tm-margin-b-20">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn tm-btn btn-block">Login</button>
+                <div class="text-center tm-margin-t-small">
+                    <a href="javascript:void();" class="tm-text-link">Forgot password?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+

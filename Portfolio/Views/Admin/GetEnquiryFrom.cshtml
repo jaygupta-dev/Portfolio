@@ -1,0 +1,82 @@
+﻿@using DataAccessLayer.ModelLayer
+@model List<ContactUsModel>
+@{
+    ViewData["Title"] = "GetEnquiryFrom";
+    Layout = "~/Views/Shared/Admin/_AdminLayout.cshtml";
+}
+@{
+    var EnquiryList = Model;
+}
+
+<div class="container-fluid">
+    <div class="row column_title">
+        <div class="col-md-12">
+            <div class="page_title">
+                <div class="d-flex"><h2 class="mr-5">Enquiry Lists</h2><h4 class="ml-5 text-success">@ViewBag.message</h4></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" id="webPageTable">
+        <div class="col-md-12">
+            <div class="white_shd full margin_bottom_30">
+                <div class="full graph_head">
+                    <div class="heading1 margin_0">
+                        <h2>Enquiry Lists</h2>
+                    </div>
+                </div>
+                <div class="table_section padding_infor_info">
+                    <div class="table-responsive-sm">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Reference no</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Mobile No</th>
+                                    <th>Status</th>
+                                    <th>Created Date</th>
+                                    <th>Subject</th>
+                                    <th>Message</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (EnquiryList != null && EnquiryList.Count > 0)
+                                {
+                                    int i = 1;
+                                    foreach (var item in EnquiryList)
+                                    {
+                                        <tr>
+                                            <td>@i</td>
+                                            <td>@item.TokenNo</td>
+                                            <td>@item.Name</td>
+                                            <td>@item.Email</td>
+                                            <td>@item.MobileNo</td>
+                                            <td>@item.CreatedAt</td>
+                                            <td>
+                                                <div class="d-flex justify-content-around">
+                                                    @if (@item.IsActive == true)
+                                                    {
+                                                        <p><a class="bg-warning text-light rounded rounded-5 p-1" href="/Admin/GetEnquiryFrom?Id=@item.Id">Pending</a></p>
+                                                    }
+                                                    @if (@item.IsActive == false)
+                                                    {
+                                                        <p class="bg-success text-light p-1 rounded rounded-5">Solved</p>
+                                                    }
+                                                </div>
+                                            </td>
+                                            <td>@item.Subject</td>
+                                            <td>@item.Message</td>
+                                        </tr>
+                                        i++;
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

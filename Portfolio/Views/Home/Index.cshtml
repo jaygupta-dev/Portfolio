@@ -12,6 +12,14 @@
     var skillOthers = skillList != null ? skillList.Where(m => m.SkillCategory.ToLower() == "others").ToList() : null;
 
     var ProjectList = Model != null ? Model.ProjectList != null ? Model.ProjectList : null : null;
+    var MetaData = Model != null ? Model.MetaModelByPage : new DataAccessLayer.ModelLayer.WebsiteMetaModel();
+}
+@{
+    ViewData["Title"] = MetaData.PageTitle;
+    ViewData["MetaTitle"] = MetaData.MetaTitle;
+    ViewData["MetaKeyword"] = MetaData.MetaKeyword;
+    ViewData["MetaDescription"] = MetaData.MetaDescription;
+    ViewData["FaviconUrl"] = Url.Content($"~/images/favicon/{(string.IsNullOrEmpty(MetaData.FaviconUrl) ? "favicon.ico" : MetaData.FaviconUrl)}");
 }
 
 
@@ -46,7 +54,7 @@
     <!-----------   projects   ------------>
   @*   @if (ProjectList != null && ProjectList.Count > 0)
     { *@
-        <section class="projects" id="projects">
+        @* <section class="projects" id="projects">
             <div class="container">
                 <h2 class="index-heading">Projects</h2>
                 <div class="project-grid">
@@ -76,7 +84,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> *@
     @* } *@
     
 

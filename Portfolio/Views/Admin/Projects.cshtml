@@ -1,0 +1,331 @@
+﻿@model DataAccessLayer.Models.ProjectModel
+@{
+    ViewData["Title"] = "Projects";
+    Layout = "~/Views/Shared/Admin/_AdminLayout.cshtml";
+}
+
+@{
+    var WebPageLists = @ViewBag.WebPages;
+    var CategoryList = Model.CategoryList;
+    var ProjectList = Model.ProjectList;
+}
+
+
+<div class="container-fluid">
+    <div class="row column_title">
+        <div class="col-md-12">
+            <div class="page_title">
+                <div class="d-flex"><h2 class="mr-5">Manage Posts</h2><h4 class="ml-5 text-success">@ViewBag.message</h4></div>
+                <h4 class="mt-2 mb-0 pb-0"><button class="btn btn-danger" id="addNewWebForm">Add New</button></h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" id="webPageForm">
+
+        <div class="col-md-12">
+            <div class="white_shd full margin_bottom_30">
+                <div class="full graph_head">
+                    <div class="heading1 margin_0">
+                        <h2>Add Posts</h2>
+                    </div>
+                </div>
+                <div class="table_section padding_infor_info">
+
+                    <form method="post" enctype="multipart/form-data" action="/Admin/Projects">
+                        <div class="row project-main">
+                            @* <div class="col-md-3">
+                                <label>Page Name<span class="text-danger">*</span></label>
+                                <select name="WebPageId" id="WebPageId" class="form-control">
+                                    <option value="0">--select--</option>
+                                    @if (WebPageLists != null)
+                                    {
+                                        foreach (var item in WebPageLists)
+                                        {
+                                            <option value="@item.Id">@item.PageName</option>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <option selected value="0">Wait for Data Adding</option>
+                                    }
+                                </select>
+                            </div> *@
+                            <div class="col-md-3">
+                                <label>Category Name<span class="text-danger">*</span></label>
+                                <select name="ProjectCategory" id="ProjectCategory" class="form-control">
+                                    <option value="">--select--</option>
+                                    <option value="frontend">Frontend Projects</option>
+                                    <option value="fullstack">Fullstack Projects</option>
+                                    <option value="others">Others</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <label>Project Image</label>
+                                <input type="file" name="ProjectImage" id="ProjectImage" class="form-control" />
+                            </div>
+                            <div class="col-md-3">
+                                <label>Image Alt Text</label>
+                                <input type="text" name="ProjectImageAlt" id="ProjectImageAlt" class="form-control" />
+                            </div>
+                            <div class="col-md-4">
+                                <label>Project Name</label>
+                                <input type="text" name="ProjectName" id="ProjectName" class="form-control" />
+                            </div>
+                            <div class="col-md-4">
+                                <label>Project Title</label>
+                                <input type="text" name="ProjectTitle" id="ProjectTitle" class="form-control" />
+                            </div>
+                            <div class="col-md-4">
+                                <label>Project Brief Intro</label>
+                                <input type="text" name="ProjectBriefIntro" id="ProjectBriefIntro" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-10"><button type="submit" class="btn btn-success saveBtn">SAVE</button></div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" id="webPageTable">
+        <div class="col-md-12">
+            <div class="white_shd full margin_bottom_30">
+                <div class="full graph_head">
+                    <div class="heading1 margin_0">
+                        <h2>Projects Lists </h2>
+                    </div>
+                </div>
+                <div class="table_section padding_infor_info">
+                    <div class="table-responsive-sm">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>ID</th>
+                                    <th>Category</th>
+                                    <th>Page Name</th>
+                                    <th>Project Name</th>
+                                    <th>Project Title</th>
+                                    <th>Project Brief Description</th>
+                                    <th>Active/De-Active</th>
+                                    <th>Update Details</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (ProjectList != null && ProjectList.Count > 0)
+                                {
+                                    int i = 1;
+                                    foreach (var item in ProjectList)
+                                    {
+                                        <tr>
+                                            <td>@i</td>
+                                            <td class="id">@item.Id</td>
+                                            <td>@item.WebPageId</td>
+                                            <td>@item.CategoryId</td>
+                                            <td><img src="@Url.Content("~/Images/ProjectImage/" + item.ProjectImageText)" height="30" /></td>
+                                            <td>@item.ProjectImageAlt</td>
+                                            <td>@item.ProjectName</td>
+                                            <td>@item.ProjectTitle</td>
+                                            <td>@item.ProjectBriefIntro</td>
+                                            <td>
+                                                <div class="d-flex justify-content-between">
+                                                    @if (@item.IsActive == true)
+                                                    {
+                                                        <p><a class="bg-success text-light rounded rounded-5 p-1" href="/admin/Projects?Id=@item.Id&actiontype=deactive">active</a></p>
+                                                    }
+                                                    @if (@item.IsActive == false)
+                                                    {
+                                                        <p class="text-success">deactive</p>
+                                                    }
+                                                    <p>
+                                                        <input type="@(!item.IsActive ? "checkbox" : "hidden")" name="ActiveCheckBox" class="ActiveCheckBox" @(item.IsActive ? "checked" : "") />
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <a href="/admin/ProjectsContent?ProjectId=@item.Id" class="editdetails">Add Contents</a>
+                                            </td>
+                                            <td>
+                                                <a href="/admin/Projects?Id=@item.Id&actiontype=edit">edit</a> |
+                                                <a href="/admin/Projects?Id=@item.Id&actiontype=delete">delete</a>
+                                            </td>
+
+                                        </tr>
+
+                                        i++;
+                                    }
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td><button class="btn btn-primary btnActive" style="display:none;">Active</button></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#webPageForm").hide();
+
+            let currentText = $("#addNewWebForm").text();
+
+            $("#addNewWebForm").click(function () {
+                if (currentText == "Add New") {
+                    $("#webPageForm").show();
+                    $("#addNewWebForm").text("Close");
+                    currentText = "Close";
+                }
+                else {
+                    $("#webPageForm").hide();
+                    $("#addNewWebForm").text("Add New");
+                    currentText = "Add New";
+                }
+            });
+
+            let checkedCount = 0;
+            let selectedIds = [];
+
+            $(".ActiveCheckBox").change(function () {
+                let tableId = $(this).closest("tr").find(".id").text().trim();
+
+                if ($(this).is(":checked")) {
+                    if (checkedCount < 5) {
+                        checkedCount++;
+                        selectedIds.push(tableId);
+                        $(".btnActive").show();
+                    } else {
+                        $(this).prop("checked", false);
+                        alert("You can only select up to 5 checkboxes.");
+                    }
+                } else {
+                    checkedCount--;
+                    selectedIds = selectedIds.filter(id => id !== tableId);
+                    if (checkedCount === 0) {
+                        $(".btnActive").hide();
+                    }
+                }
+            });
+
+            $(".btnActive").click(function () {
+                if (selectedIds.length > 0) {
+                    $.ajax({
+                        url: "/Admin/Projects",
+                        data: {
+                            DeleteId: null,
+                            ActionType: "active",
+                            SelectedIds: JSON.stringify(selectedIds)
+                        },
+                        success: function (response) {
+                            selectedIds = [];
+                            checkedCount = 0;
+                            $(".btnActive").hide();
+                            location.reload();
+                        },
+                        error: function (error) {
+                            console.log("Error:", error);
+                        }
+                    });
+                }
+            });
+
+        });
+
+        $(document).ready(function () {
+
+            $(".imagesRow").hide();
+            $("#addmore").hide();
+
+            $("#addMultipleImages").click(function () {
+                $(".imagesRow").show();
+                $("#addMultipleImages").hide();
+                $("#addmore").show();
+            });
+
+            let initialCount = 0;
+
+            $("#addmore").click(function () {
+                let divAppend = `
+                        <div class="col-sm-12 childDiv">
+                            <div class="row">
+                                <div class="col-12">
+                                    <label>Image Description</label>
+                                    <textarea class="form-control d-inline" name="Model.PostImageList[${initialCount}].ImageDescription"></textarea>
+                                </div>
+                                <div class="col-5">
+                                    <label>Image</label>
+                                    <input type="file" class="form-control d-inline" name="Model.PostImageList[${initialCount}].ImagePost">
+                                </div>
+                                <div class="col-5">
+                                    <label>Image Title</label>
+                                    <input type="text" class="form-control d-inline" name="Model.PostImageList[${initialCount}].ImageTitle">
+                                </div>
+                                <div class="pt-2 col-2">
+                                    <span class="btn btn-danger btnRemove mt-4">Remove</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+
+                let parentDiv = $(".imagesRow");
+
+                parentDiv.append(divAppend);
+
+                initialCount++;
+                console.log(initialCount);
+            });
+
+            $(document).on("click", ".btnRemove", function () {
+                if ($(".childDiv").length > 0) {
+                    $(this).closest(".childDiv").remove();
+                    reindexElements();
+                    initialCount--;
+                    console.log(initialCount);
+                }
+            });
+
+            function reindexElements() {
+                $(".childDiv").each(function (index) {
+                    $(this).find("textarea[name^='Model.PostImageList']").each(function () {
+                        $(this).attr("name", `Model.PostImageList[${index}].ImageDescription`);
+                    });
+                    $(this).find("input[name^='Model.PostImageList']").each(function () {
+                        if ($(this).attr("type") === "file") {
+                            $(this).attr("name", `Model.PostImageList[${index}].ImagePost`);
+                        } else {
+                            $(this).attr("name", `Model.PostImageList[${index}].ImageTitle`);
+                        }
+                    });
+                });
+            }
+
+        });
+
+        $(document).ready(function () {
+            $(".EditDetails").click(function () {
+                let tableId = $(this).closest("tr").find(".id").text().trim();
+                $("#addMultipleImages").show();
+                $("#webPageForm").show();
+                $(".project-main").hide();
+                $("#project-id").val(tableId);
+            });
+        })
+
+    </script>
+
+}
+
+

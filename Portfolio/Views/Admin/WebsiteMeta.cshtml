@@ -1,0 +1,209 @@
+﻿@model  DataAccessLayer.ModelLayer.WebsiteMetaModel
+@{
+    ViewData["Title"] = "WebsiteMeta";
+    Layout = "~/Views/Shared/Admin/_AdminLayout.cshtml";
+}
+@{
+    var WebPageLists = @ViewBag.WebPages;
+    var MetaData = Model != null ? Model.WebMetaList : new List<DataAccessLayer.ModelLayer.WebsiteMetaModel>();
+}
+
+<div class="container-fluid">
+    <div class="row column_title">
+        <div class="col-md-12">
+            <div class="page_title">
+                <div class="d-flex"><h2 class="mr-5">Manage Meta Data</h2><h4 class="ml-5 text-success">@ViewBag.message</h4></div>
+                <h4 class="mt-2 mb-0 pb-0"><button class="btn btn-danger" id="addNewWebForm">Add New</button></h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" id="@(Model.Id > 0 ? "" : "webPageForm")">
+
+        <div class="col-md-12">
+            <div class="white_shd full margin_bottom_30">
+                <div class="full graph_head">
+                    <div class="heading1 margin_0">
+                        <h2>Add Meta Data</h2>
+                    </div>
+                </div>
+                <div class="table_section padding_infor_info">
+
+                    <form method="post" enctype="multipart/form-data" action="/Admin/WebsiteMeta">
+                        <div class="row project-main">
+                            <div class="col-md-4">
+                                <label>Page Name<span class="text-danger">*</span></label>
+                                <select name="PageName" id="WebPageId" class="form-control">
+                                    <option value="0">--select--</option>
+                                    @if (WebPageLists != null)
+                                    {
+                                        foreach (var item in WebPageLists)
+                                        {
+                                            @if(@Model.PageName == @item.PageName)
+                                            {
+                                                <option value="@item.PageName" selected>@item.PageName</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@item.PageName">@item.PageName</option>
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <option selected value="0">Wait for Data Adding</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label>Page Title<span class="text-danger">*</span></label>
+                                <input type="text" name="PageTitle" id="PageTitle" class="form-control" value="@Model.PageTitle" />
+                            </div>
+                            <div class="col-md-4">
+                                <label>Favicon Image</label>
+                                <input type="file" name="FaviconUrlText" id="FaviconUrl" class="form-control"/>
+                                @if(Model.Id > 0){
+                                    <img height="50" src="~/images/favicon/@Model.FaviconUrl"/>
+                                    <input type="hidden" name="FaviconUrl" value="@Model.FaviconUrl"/>
+                                }
+
+                            </div>
+                            <div class="col-md-4">
+                                <label>Meta Title</label>
+                                <input type="text" name="MetaTitle" id="MetaTitle" class="form-control" value="@Model.MetaTitle"/>
+                            </div>
+                            <div class="col-md-4">
+                                <label>Meta Keywords(separated by comma(,))</label>
+                                <input type="text" name="MetaKeyword" id="MetaKeyword" class="form-control" value="@Model.MetaKeyword"/>
+                            </div>
+                            <div class="col-md-4">
+                                <label>Detail Description</label>
+                                <input type="text" name="MetaDescription" id="MetaDescription" class="form-control" value="@Model.MetaDescription"/>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <input type="hidden" value="@Model.Id" name="Id"/>
+                            <div class="col-10"><button type="submit" class="btn btn-success saveBtn">SAVE</button></div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row @(Model.Id > 0 ? "d-none" : "")" id="webPageTable">
+        <div class="col-md-12">
+            <div class="white_shd full margin_bottom_30">
+                <div class="full graph_head">
+                    <div class="heading1 margin_0">
+                        <h2>Meta Data Lists </h2>
+                    </div>
+                </div>
+                <div class="table_section padding_infor_info">
+                    <div class="table-responsive-sm">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>ID</th>
+                                    <th>Page Name</th>
+                                    <th>Page Title</th>
+                                    <th>Favicon Icon</th>
+                                    <th>Meta Title</th>
+                                    <th>Meta Keywords</th>
+                                    <th>Meta Description</th>
+                                    <th>Created Date</th>
+                                    <th>Active/De-Active</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (MetaData != null && MetaData.Count > 0)
+                                {
+                                    int i = 1;
+                                    foreach (var item in MetaData)
+                                    {
+                                        <tr>
+                                            <td>@i</td>
+                                            <td class="id">@item.Id</td>
+                                            <td>@item.PageName</td>
+                                            <td>@item.PageTitle</td>
+                                            <td><img src="@Url.Content("~/Images/Favicon/" + item.FaviconUrl)" height="30" /></td>
+                                            <td>@item.MetaTitle</td>
+                                            <td>@item.MetaKeyword</td>
+                                            <td>@item.MetaDescription</td>
+                                            <td>@item.CreatedDate</td>
+                                            <td>
+                                                <div class="d-flex justify-content-between">
+                                                    @if (@item.IsActive == true)
+                                                    {
+                                                        <p>
+                                                            <a class="bg-success text-light rounded rounded-5 p-1" href="/Admin/WebsiteMeta?ActionType=deactivate&Id=@item.Id">Active</a>
+                                                        </p>
+                                                    }
+                                                    @if (@item.IsActive == false)
+                                                    {
+                                                        <p class="text-light">
+                                                            <a class="bg-danger text-light rounded rounded-5 p-1" href="/Admin/WebsiteMeta?ActionType=activate&Id=@item.Id">DeActive</a>
+                                                        </p>
+                                                    }
+                                                </div>
+                                            </td>
+                                            <td>
+                                                @if (item.IsActive == true)
+                                                {
+                                                    <a class="bg-success text-light rounded rounded-5 p-1" href="/Admin/WebsiteMeta?ActionType=select&Id=@item.Id">Edit</a>
+                                                }
+                                                else
+                                                {
+                                                    <a class="bg-danger text-light rounded rounded-5 p-1" href="/Admin/WebsiteMeta?Id=@item.Id&ActionType=delete">delete</a>
+                                                }
+                                            </td>
+
+                                        </tr>
+
+                                        i++;
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            $("#webPageForm").hide();
+
+            let currentText = $("#addNewWebForm").text();
+
+            $("#addNewWebForm").click(function () {
+                if (currentText == "Add New") {
+                    $("#webPageForm").show();
+                    $("#addNewWebForm").text("Close");
+                    currentText = "Close";
+                }
+                else {
+                    $("#webPageForm").hide();
+                    $("#addNewWebForm").text("Add New");
+                    currentText = "Add New";
+                }
+            });
+
+        });
+
+    </script>
+
+}
+
+
+
+

@@ -646,42 +646,7 @@ section {
     animation: progressColorChange 3s infinite linear; 
 }
 
-/* --- Media Queries for Responsiveness --- */
-/*@media (max-width: 992px) {
-    #progress-bar-skill .row {
-        display: block;
-    }
 
-    #progress-bar-skill .col-12 {
-        width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    #progress-bar-skill .skill-item {
-        font-size: 14px;
-    }
-
-    #progress-bar-skill h3 {
-        font-size: 18px;
-    }
-
-    #progress-bar-skill .col-12.col-md-6 {
-        width: 100%;
-    }
-
-    #progress-bar-skill h2 {
-        font-size: 20px;
-        text-align: center;
-    }
-}
-
-
-@media (max-width: 576px) {
-    #progress-bar-skill .col-12 {
-        flex: 1 1 100%;
-    }
-}*/
 
 @media (min-width: 576px) {
     #progress-bar-skill .col-md-6 {
@@ -791,3 +756,103 @@ section {
     transition: 0.4s;
 }
 
+/***************   contact us page **************/
+
+#contact-us-page .contact-section, #contact-us-page .portfolio-section, #contact-us-page .skills-section, #contact-us-page .testimonials-section, #contact-us-page .achievements-section {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+}
+
+#contact-us-page .form-control {
+    border-radius: 10px;
+}
+
+#contact-us-page .btn-custom {
+    background-color: #007bff;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+    #contact-us-page .btn-custom:hover {
+        background-color: #0056b3;
+        color: white;
+    }
+
+#contact-us-page .social-media-section a {
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+}
+
+#contact-us-page .social-media-section i {
+    margin-right: 5px;
+}
+
+#contact-us-page .counter {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#contact-us-page .counter-value {
+    font-size: 50px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+#contact-us-page .portfolio-gallery img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+#contact-us-page .testimonials-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+    #contact-us-page .testimonials-card p {
+        font-style: italic;
+    }
+
+#contact-us-page .testimonial-name {
+    font-weight: bold;
+}
+
+#contact-us-page .btn-outline-custom {
+    border-radius: 10px;
+    margin: 10px;
+}
+
+#contact-us-page .progress-bar {
+    background-color: #007bff;
+}
+
+
+#contact-us-page .social-media-section .btn-outline-custom {
+    transition: all 0.3s ease-in-out;
+    color: #ff5200;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+    #contact-us-page .social-media-section .btn-outline-custom img {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    #contact-us-page .social-media-section .btn-outline-custom:hover {
+        border: 2px solid #ff5200; 
+        padding: 10px 15px;
+        box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3); 
+        transform: translateY(-3px); 
+    }
+
+        #contact-us-page .social-media-section .btn-outline-custom:hover img {
+            transform: scale(1.1);
+        }

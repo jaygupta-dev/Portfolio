@@ -7,9 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Admin\Projects.cshtml" />
+    <Content Remove="Views\Admin\ProjectsContent.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Data\" />
     <Folder Include="Models\" />
     <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\images\slider\" />
     <Folder Include="wwwroot\images\pagelogo\" />
     <Folder Include="wwwroot\js\" />
     <Folder Include="wwwroot\lib\bootstrap\" />

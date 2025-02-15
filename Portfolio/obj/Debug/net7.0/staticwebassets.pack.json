@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Portfolio.bundle.scp.css",
-      "PackagePath": "staticwebassets\\Portfolio.bundle.scp.css"
+      "PackagePath": "staticwebassets\\Portfolio.2dqkr2ky89.bundle.scp.css"
     },
     {
       "Id": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\wwwroot\\Admin\\assets\\css\\animate.css",
@@ -2957,6 +2957,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\wwwroot\\images\\favicon\\3647e489-c19c-4f9e-8fb2-45004845a97d.png",
+      "PackagePath": "staticwebassets\\images\\favicon\\3647e489-c19c-4f9e-8fb2-45004845a97d.png"
+    },
+    {
+      "Id": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\wwwroot\\images\\favicon\\favicon.ico",
+      "PackagePath": "staticwebassets\\images\\favicon\\favicon.ico"
+    },
+    {
       "Id": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\wwwroot\\images\\jaydeveloper.jpg",
       "PackagePath": "staticwebassets\\images\\jaydeveloper.jpg"
     },
@@ -2967,6 +2975,78 @@
     {
       "Id": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\wwwroot\\images\\pagelogo\\8607798e-e5de-4aff-8672-cf9b173ce712.png",
       "PackagePath": "staticwebassets\\images\\pagelogo\\8607798e-e5de-4aff-8672-cf9b173ce712.png"
+    },
+    {
+      "Id": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\wwwroot\\images\\pagelogo\\998dbf00-4f66-4923-a460-c4d67f9cbd74.png",
+      "PackagePath": "staticwebassets\\images\\pagelogo\\998dbf00-4f66-4923-a460-c4d67f9cbd74.png"
+    },
+    {
+      "Id": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\wwwroot\\images\\pagelogo\\a2d03157-2b90-48aa-8588-2c0e27cb9195.png",
+      "PackagePath": "staticwebassets\\images\\pagelogo\\a2d03157-2b90-48aa-8588-2c0e27cb9195.png"
+    },
+    {
+      "Id": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\wwwroot\\images\\pagelogo\\c16403e4-7e80-48c2-896c-728c7a5a599d.png",
+      "PackagePath": "staticwebassets\\images\\pagelogo\\c16403e4-7e80-48c2-896c-728c7a5a599d.png"
+    },
+    {
+      "Id": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\wwwroot\\images\\slider\\0d50a700-cb68-4f8b-98b1-b42672ec6ae7.png",
+      "PackagePath": "staticwebassets\\images\\slider\\0d50a700-cb68-4f8b-98b1-b42672ec6ae7.png"
+    },
+    {
+      "Id": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\wwwroot\\images\\slider\\17b4abe5-75df-4288-a7d0-340737c11edc.jpg",
+      "PackagePath": "staticwebassets\\images\\slider\\17b4abe5-75df-4288-a7d0-340737c11edc.jpg"
+    },
+    {
+      "Id": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\wwwroot\\images\\slider\\22fd9b55-57b4-4dff-a860-0401d41a97cb.jpg",
+      "PackagePath": "staticwebassets\\images\\slider\\22fd9b55-57b4-4dff-a860-0401d41a97cb.jpg"
+    },
+    {
+      "Id": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\wwwroot\\images\\slider\\3779a508-d7be-418e-8a0b-3ab8a3dd685b.jpg",
+      "PackagePath": "staticwebassets\\images\\slider\\3779a508-d7be-418e-8a0b-3ab8a3dd685b.jpg"
+    },
+    {
+      "Id": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\wwwroot\\images\\slider\\6e4a2c5c-29e7-454d-80e0-317a2d87613e.jpg",
+      "PackagePath": "staticwebassets\\images\\slider\\6e4a2c5c-29e7-454d-80e0-317a2d87613e.jpg"
+    },
+    {
+      "Id": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\wwwroot\\images\\slider\\7efcf782-5090-4fc5-901f-d4389663e912.jpg",
+      "PackagePath": "staticwebassets\\images\\slider\\7efcf782-5090-4fc5-901f-d4389663e912.jpg"
+    },
+    {
+      "Id": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\wwwroot\\images\\slider\\90ba08cb-05d3-4709-9cd3-2be9e2bce98b.jpg",
+      "PackagePath": "staticwebassets\\images\\slider\\90ba08cb-05d3-4709-9cd3-2be9e2bce98b.jpg"
+    },
+    {
+      "Id": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\wwwroot\\images\\slider\\adfcf052-d657-4305-b6a3-47c8b1b0fdae.jpg",
+      "PackagePath": "staticwebassets\\images\\slider\\adfcf052-d657-4305-b6a3-47c8b1b0fdae.jpg"
+    },
+    {
+      "Id": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\wwwroot\\images\\socialicon\\21c7b0e8-2f62-4118-acfc-ccfe1fc9af96.png",
+      "PackagePath": "staticwebassets\\images\\socialicon\\21c7b0e8-2f62-4118-acfc-ccfe1fc9af96.png"
+    },
+    {
+      "Id": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\wwwroot\\images\\socialicon\\2ab2972f-fdd9-474a-b19c-faf7fc6fa240.png",
+      "PackagePath": "staticwebassets\\images\\socialicon\\2ab2972f-fdd9-474a-b19c-faf7fc6fa240.png"
+    },
+    {
+      "Id": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\wwwroot\\images\\socialicon\\2c6a38e1-5ffb-4fa7-9ec3-51e65d8a2a44.png",
+      "PackagePath": "staticwebassets\\images\\socialicon\\2c6a38e1-5ffb-4fa7-9ec3-51e65d8a2a44.png"
+    },
+    {
+      "Id": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\wwwroot\\images\\socialicon\\3a7954d7-5ee5-4faf-ab7a-d35cc31a2c51.png",
+      "PackagePath": "staticwebassets\\images\\socialicon\\3a7954d7-5ee5-4faf-ab7a-d35cc31a2c51.png"
+    },
+    {
+      "Id": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\wwwroot\\images\\socialicon\\ac1b7d4e-2ac9-4135-bf1a-c1ca3799da35.png",
+      "PackagePath": "staticwebassets\\images\\socialicon\\ac1b7d4e-2ac9-4135-bf1a-c1ca3799da35.png"
+    },
+    {
+      "Id": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\wwwroot\\images\\socialicon\\c8f5a428-e2f0-49cb-9e56-c4100d4fc965.png",
+      "PackagePath": "staticwebassets\\images\\socialicon\\c8f5a428-e2f0-49cb-9e56-c4100d4fc965.png"
+    },
+    {
+      "Id": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\wwwroot\\images\\socialicon\\d0e6c80e-9300-4f87-9665-7cb4e6d3c80f.png",
+      "PackagePath": "staticwebassets\\images\\socialicon\\d0e6c80e-9300-4f87-9665-7cb4e6d3c80f.png"
     },
     {
       "Id": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\wwwroot\\js\\site.js",
@@ -3215,6 +3295,10 @@
     {
       "Id": "D:\\JAYANENDRA GUPTA\\STUDY MATERIALSsss\\Portfolio\\Portfolio\\Portfolio\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Portfolio.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Portfolio.Microsoft.AspNetCore.StaticWebAssets.props",

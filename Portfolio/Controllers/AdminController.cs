@@ -190,23 +190,47 @@ namespace Portfolio.Controllers
             return RedirectToAction("Projects");
         }
 
-        //public IActionResult GetIPData(int Id)
-        //{
-        //    if (Id > 0)
-        //    {
-        //        string Message = _adminContentRepo.DeleteAcivity(Id);
-        //        TempData["message"] = Message;
-        //        return RedirectToAction("GetIPData");
-        //    }
-        //    ViewBag.message = TempData["message"];
-        //    var ActivityData = _adminContentRepo.AcivityData(Id);
-        //    return View(ActivityData);
-        //}
+        public IActionResult ManageBannerSlider(string Id, string ActionType)
+        {
+            BannerSliderModel model = new BannerSliderModel();
 
-        //public IActionResult ProjectsContent(int ProjectId)
+            if (!string.IsNullOrEmpty(Id) && !string.IsNullOrEmpty(ActionType) && ActionType != "edit")
+            {
+                var message = _repo.ManageSlider(Id, ActionType);
+                TempData["message"] = message;
+                return RedirectToAction("ManageBannerSlider");
+            }
+
+            List<string> webPage = _repo.GetAllPage().Where(m => m.IsActive == true).Select(m => m.PageName).ToList();
+            if (ActionType == "edit")
+            {
+                model = _repo.GetBannerIntroOne(Id);
+                //return View(model);
+            }
+
+            var BannerLists = _repo.GetBannerSlider();
+            model.WebPageList = webPage;
+            model.SliderList = BannerLists;
+            ViewBag.message = TempData["message"];
+            return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult ManageBannerSlider(BannerSliderModel model)
+        {
+            string message = _repo.InsertUpdateSlider(model);
+            TempData["message"] = message;
+            return RedirectToAction("ManageBannerSlider");
+        }
+
+        //public IActionResult Achievements()
         //{
         //    return View();
         //}
-
+        //[HttpPost]
+        //public IActionResult Achievements()
+        //{
+        //    return View();
+        //}
     }
 }

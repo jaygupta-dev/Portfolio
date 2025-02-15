@@ -13,3 +13,4 @@ D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\BusinessLogicLayer\ob
 D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\BusinessLogicLayer\obj\Debug\net7.0\refint\BusinessLogicLayer.dll
 D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\BusinessLogicLayer\obj\Debug\net7.0\BusinessLogicLayer.pdb
 D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\BusinessLogicLayer\obj\Debug\net7.0\ref\BusinessLogicLayer.dll
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\BusinessLogicLayer\obj\Debug\net7.0\BusinessLogicLayer.sourcelink.json

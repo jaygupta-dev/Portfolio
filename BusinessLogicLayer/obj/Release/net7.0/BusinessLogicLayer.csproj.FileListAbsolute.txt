@@ -1,0 +1,16 @@
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\BusinessLogicLayer\bin\Release\net7.0\BusinessLogicLayer.deps.json
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\BusinessLogicLayer\bin\Release\net7.0\BusinessLogicLayer.dll
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\BusinessLogicLayer\bin\Release\net7.0\BusinessLogicLayer.pdb
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\BusinessLogicLayer\bin\Release\net7.0\DataAccessLayer.dll
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\BusinessLogicLayer\bin\Release\net7.0\DataAccessLayer.pdb
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\BusinessLogicLayer\obj\Release\net7.0\BusinessLogicLayer.csproj.AssemblyReference.cache
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\BusinessLogicLayer\obj\Release\net7.0\BusinessLogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\BusinessLogicLayer\obj\Release\net7.0\BusinessLogicLayer.AssemblyInfoInputs.cache
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\BusinessLogicLayer\obj\Release\net7.0\BusinessLogicLayer.AssemblyInfo.cs
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\BusinessLogicLayer\obj\Release\net7.0\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\BusinessLogicLayer\obj\Release\net7.0\BusinessLogicLayer.sourcelink.json
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\BusinessLogicLayer\obj\Release\net7.0\Business.450209FB.Up2Date
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\BusinessLogicLayer\obj\Release\net7.0\BusinessLogicLayer.dll
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\BusinessLogicLayer\obj\Release\net7.0\refint\BusinessLogicLayer.dll
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\BusinessLogicLayer\obj\Release\net7.0\BusinessLogicLayer.pdb
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\BusinessLogicLayer\obj\Release\net7.0\ref\BusinessLogicLayer.dll

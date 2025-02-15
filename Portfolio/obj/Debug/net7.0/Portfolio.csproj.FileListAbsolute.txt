@@ -234,3 +234,8 @@ D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\Portfolio\bin\Debug\n
 D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\Portfolio\bin\Debug\net7.0\DataAccessLayer.dll
 D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\Portfolio\bin\Debug\net7.0\BusinessLogicLayer.pdb
 D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\Portfolio\bin\Debug\net7.0\DataAccessLayer.pdb
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\Portfolio\obj\Debug\net7.0\Portfolio.sourcelink.json
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\Portfolio\bin\Debug\net7.0\Portfolio.staticwebassets.endpoints.json
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\Portfolio\obj\Debug\net7.0\staticwebassets.build.endpoints.json
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\Portfolio\obj\Debug\net7.0\staticwebassets\msbuild.Portfolio.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\Portfolio\obj\Debug\net7.0\staticwebassets.upToDateCheck.txt

@@ -1,0 +1,222 @@
+﻿@model DataAccessLayer.ModelLayer.BannerSliderModel
+@{
+    ViewData["Title"] = "ManageBannerSlider";
+    Layout = "~/Views/Shared/Admin/_AdminLayout.cshtml";
+}
+
+@{
+    var WebPageLists = @Model != null ? Model.WebPageList != null ? Model.WebPageList : new List<string>() : null;
+    var BannerLists = @Model != null ? Model.SliderList != null ? Model.SliderList : new List<DataAccessLayer.ModelLayer.BannerSliderModel>() : null;
+}
+
+<div class="container-fluid">
+    <div class="row column_title">
+        <div class="col-md-12">
+            <div class="page_title">
+                <div class="d-flex"><h2 class="mr-5">Manage Banner Pages</h2><h4 class="ml-5 text-success">@ViewBag.message</h4></div>
+                <h4 class="mt-2 mb-0 pb-0"><button class="btn btn-danger" id="addNewWebForm">Add New</button></h4>
+            </div>
+        </div>
+    </div>
+
+    @{
+        var formId = Model != null ? Model.Id : 0;
+    }
+
+    <div class="row" id="@(@formId > 0 ? "" : "webPageForm")">
+
+        <div class="col-md-12">
+            <div class="white_shd full margin_bottom_30">
+                <div class="full graph_head">
+                    <div class="heading1 margin_0">
+                        <h2>Add Web Pages</h2>
+                    </div>
+                </div>
+                <div class="table_section padding_infor_info">
+                    <form method="post" enctype="multipart/form-data" action="/Admin/ManageBannerSlider">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Page Name<span class="text-danger">*</span></label>
+                                <select name="WebPage" id="WebPage" class="form-control">
+                                    <option value="0">--select--</option>
+                                    @if (WebPageLists != null)
+                                    {
+                                        foreach (var item in WebPageLists)
+                                        {
+                                            if (Model != null && Model.WebPage == item)
+                                            {
+                                                <option selected value="@item">@item</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@item">@item</option>
+                                            }
+
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <option selected value="0">Wait for Data Adding</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label>Banner Image (2600w * 1000h)</label>
+                                <input type="file" name="SliderImage" id="SliderImage" class="form-control" />
+                                <span id="error-message" style="color:red; display:none;">Image dimensions must be  between (2000x700 and 2600x1000).</span>
+                                <input type="hidden" name="SliderImagePath" value="@Model.SliderImagePath" />
+                                @if (!string.IsNullOrEmpty(@Model.SliderImagePath)){
+                                    <img src="~/images/slider/@Model.SliderImagePath" height="50" />
+                                }
+
+                            </div>
+                            <div class="col-md-4">
+                                <label>Banner Alt Text</label>
+                                <input type="text" name="SliderImageAlt" id="SliderImageAlt" class="form-control" value="@Model.SliderImageAlt" />
+                            </div>
+                            <div class="col-md-12">
+                                <label>Introduction Heading</label>
+                                <textarea name="SlideTitle" id="SlideTitle" class="form-control" rows="2">@Model.SlideTitle</textarea>
+                            </div>
+                            <div class="col-md-12">
+                                <label>Introduction Content</label>
+                                <textarea name="SlideContent" id="SlideContent" class="form-control" rows="3">@Model.SlideContent</textarea>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <input name="Id" value="@Model.Id" type="hidden" />
+                            <div class="col-12"><button type="submit" class="btn btn-success">SAVE</button></div>
+                        </div>
+                    </form>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row @(Model.Id > 0 ? "d-none" : "")" id="webPageTable">
+        <div class="col-md-12">
+            <div class="white_shd full margin_bottom_30">
+                <div class="full graph_head">
+                    <div class="heading1 margin_0">
+                        <h2>WebPages Lists</h2>
+                    </div>
+                </div>
+                <div class="table_section padding_infor_info">
+                    <div class="table-responsive-sm">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>SlideImage ID</th>
+                                    <th>Page Name</th>
+                                    <th>Slide Image</th>
+                                    <th>Slide Image Alt</th>
+                                    <th>Slide Heading</th>
+                                    <th>Slide Description</th>
+                                    <th>Active/De-Active</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (BannerLists != null && BannerLists.Count > 0)
+                                {
+                                    int i = 1;
+                                    foreach (var item in BannerLists)
+                                    {
+                                        <tr>
+                                            <td>@i</td>
+                                            <td class="id">@item.Id</td>
+                                            <td>@item.WebPage</td>
+                                            <td><img src="@Url.Content("~/images/slider/" + item.SliderImagePath)" height="30" /></td>
+                                            <td>@item.SliderImageAlt</td>
+                                            <td>@item.SlideTitle</td>
+                                            <td>@item.SlideContent</td>
+                                            <td>
+                                                <div class="d-flex justify-content-between">
+                                                    @if (@item.IsActive == true)
+                                                    {
+                                                        <p><a class="bg-success text-light rounded rounded-5 p-1" href="/Admin/ManageBannerSlider?Id=@item.Id&ActionType=deactivate">Active</a></p>
+                                                    }
+                                                    @if (@item.IsActive == false)
+                                                    {
+                                                        <p><a class="bg-danger text-light rounded rounded-5 p-1" href="/Admin/ManageBannerSlider?Id=@item.Id&ActionType=activate">DeActive</a></p>
+                                                    }
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex justify-content-between">
+                                                    @if (@item.IsActive == true)
+                                                    {
+                                                        <a class="bg-success text-light rounded rounded-5 p-1" href="/Admin/ManageBannerSlider?Id=@item.Id&ActionType=edit">Edit</a>
+                                                        <a class="bg-secondary text-light rounded rounded-5 p-1 cursor-pointer">Delete</a>
+                                                    }
+                                                    @if (@item.IsActive == false)
+                                                    {
+                                                        <a class="bg-secondary text-light rounded rounded-5 p-1">Edit</a>
+                                                        <a class="bg-danger text-light rounded rounded-5 p-1 cursor-pointer" href="/Admin/ManageBannerSlider?Id=@item.Id&ActionType=delete">Delete</a>
+                                                    }
+                                                </div>
+                                                
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#webPageForm").hide();
+
+            let currentText = $("#addNewWebForm").text();
+
+            $("#addNewWebForm").click(function () {
+                if (currentText == "Add New") {
+                    $("#webPageForm").show();
+                    $("#addNewWebForm").text("Close");
+                    currentText = "Close";
+                }
+                else {
+                    $("#webPageForm").hide();
+                    $("#addNewWebForm").text("Add New");
+                    currentText = "Add New";
+                }
+            });
+
+            
+            $('#BannerImage').change(function () {
+                var file = this.files[0];
+                if (file) {
+                    var img = new Image();
+                    img.onload = function () {
+                        if (img.width >= 2000 && img.width <= 2600 && img.height >= 700 && img.height <= 1000) {
+                            $('#error-message').hide();
+                        } else {
+                            $('#error-message').show();
+                            $('#BannerImage').val('');
+                        }
+                    };
+                    img.src = URL.createObjectURL(file);
+                }
+            });
+
+        });
+    </script>
+
+}
+
+
+

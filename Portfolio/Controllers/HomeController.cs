@@ -28,6 +28,8 @@ namespace Portfolio.Controllers
 
             model.skillList = _repo.GetActiveSkill();
             model.MetaModelByPage = _repo.MetaDataByPage("index".ToUpper());
+            model.SliderList = _repo.GetActivePageSlider();
+
             return View(model);
         }
 

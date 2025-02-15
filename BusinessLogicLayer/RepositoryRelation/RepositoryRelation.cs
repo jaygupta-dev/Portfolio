@@ -9,6 +9,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace BusinessLogicLayer.RepositoryRelation
 {
@@ -175,5 +176,43 @@ namespace BusinessLogicLayer.RepositoryRelation
         {
             return _repo.InsertUpdateProjects(model);
         }
+
+        public string InsertUpdateSlider(BannerSliderModel model)
+        {
+            return _repo.InsertUpdateSlider(model);
+        }
+
+        public List<BannerSliderModel> GetBannerSlider()
+        {
+            return _repo.GetBannerSlider();
+        }
+
+        public BannerSliderModel GetBannerIntroOne(string Id)
+        {
+            return _repo.GetBannerIntroOne(Id);
+        }
+        public string ManageSlider(string Id, string ActionType)
+        {
+            return _repo.ManageSlider(Id, ActionType);
+        }
+
+        public List<BannerSliderModel> GetActivePageSlider()
+        {
+            List<BannerSliderModel> SliderList = new List<BannerSliderModel>();
+
+            var slide = _repo.GetBannerSlider();
+
+            var activeslider = slide.Where(m => m.IsActive == true && m.WebPage.ToLower() == "index").Select(m => new BannerSliderModel
+            {
+                SliderImagePath = m.SliderImagePath,
+                SliderImageAlt = m.SliderImageAlt,
+                SlideTitle = m.SlideTitle,
+                SlideContent = m.SlideContent,
+            }).ToList();
+
+            SliderList = activeslider.ToList();
+            return SliderList;
+        }
+
     }
 }

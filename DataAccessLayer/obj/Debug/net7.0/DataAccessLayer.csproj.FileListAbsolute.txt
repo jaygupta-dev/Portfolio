@@ -10,3 +10,4 @@ D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\DataAccessLayer\obj\D
 D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\DataAccessLayer\obj\Debug\net7.0\refint\DataAccessLayer.dll
 D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\DataAccessLayer\obj\Debug\net7.0\DataAccessLayer.pdb
 D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\DataAccessLayer\obj\Debug\net7.0\ref\DataAccessLayer.dll
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\DataAccessLayer\obj\Debug\net7.0\DataAccessLayer.sourcelink.json

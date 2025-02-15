@@ -12,6 +12,7 @@ namespace DataAccessLayer.ModelLayer
         public List<SkillModel> skillList { get; set; } = new List<SkillModel>();
         public List<ProjectModel> ProjectList { get; set; } = new List<ProjectModel>();
         public WebsiteMetaModel MetaModelByPage { get; set; } = new WebsiteMetaModel();
+        public List<BannerSliderModel> SliderList { get; set; } = new List<BannerSliderModel>();
     }
 
     public class ErrorModel
@@ -96,5 +97,19 @@ namespace DataAccessLayer.ModelLayer
     {
         public List<SocialProfileModel> SocialUrlList { get; set; } = new List<SocialProfileModel>();
         public Dictionary<string, decimal> skillCalculationOverAll { get; set; } = new Dictionary<string, decimal>();
+    }
+
+    public class BannerSliderModel
+    {
+        public int Id { get; set; }
+        public string? WebPage { get; set; }
+        public IFormFile? SliderImage { get; set; }
+        public string? SliderImagePath { get; set; }
+        public string? SliderImageAlt { get; set; }
+        public string? SlideTitle { get; set; }
+        public string? SlideContent { get; set; }
+        public bool IsActive { get; set; }
+        public List<BannerSliderModel> SliderList { get; set; } = new List<BannerSliderModel>();
+        public List<string> WebPageList { get; set; } = new List<string>();
     }
 }

@@ -804,5 +804,122 @@ namespace BusinessLogicLayer.Repository
             return message;
         }
 
+        public string InsertUpdateSlider(BannerSliderModel model)
+        {
+            string message = string.Empty;
+            try
+            {
+                string FileName = string.Empty;
+
+                if (model.SliderImage != null && model.SliderImagePath == null)
+                {
+                    FileName = _common.SaveImage(model.SliderImage, "/images/slider");
+                }
+                else
+                {
+                    FileName = model.SliderImagePath != null ? model.SliderImagePath : "";
+                }
+
+                SqlParameter[] parameters =
+                {
+                    new SqlParameter("@ActionType","modify"),
+                    new SqlParameter("@Id",model.Id),
+                    new SqlParameter("@WebPage",model.WebPage),
+                    new SqlParameter("@SliderImage",FileName),
+                    new SqlParameter("@SliderImageAlt",model.SliderImageAlt != null ? model.SliderImageAlt : ""),
+                    new SqlParameter("@SlideTitle",model.SlideTitle != null ? model.SlideTitle : ""),
+                    new SqlParameter("@SlideContent",model.SlideContent != null ? model.SlideContent : "")
+                };
+
+                int result = _dataUtility.ExecuteSqlSP("sp_ManageBannerSlider", parameters);
+
+                if (result == 0)
+                {
+                    message = "Data Not Inserted !!! Please Try Again.";
+                }
+                else
+                {
+                    message = "Data Modify Successfully.";
+                }
+            }
+            catch (Exception ex)
+            {
+                _common.SaveErrorMessage("ManageBannerIntro",ex);
+            }
+            return message;
+        }
+
+        public List<BannerSliderModel> GetBannerSlider()
+        {
+            var BannerLists = new List<BannerSliderModel>();
+            try
+            {
+                SqlParameter[] parameters =
+                {
+                    new SqlParameter("@ActionType",("select"))
+                };
+
+                DataTable result = _dataUtility.GetDataTableSP("sp_ManageBannerSlider", parameters);
+
+                if (result != null && result.Rows.Count > 0)
+                {
+                    BannerLists = _common.ConvertToList<BannerSliderModel>(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                _common.SaveErrorMessage("GetBannerIntro",ex);
+            }
+            return BannerLists;
+        }
+
+
+        public BannerSliderModel GetBannerIntroOne(string Id)
+        {
+            BannerSliderModel bannerIntro = new BannerSliderModel();
+            try
+            {
+                SqlParameter[] parameters =
+                {
+                    new SqlParameter("@ActionType","select"),
+                    new SqlParameter("@Id",Convert.ToInt32(Id))
+                };
+
+                DataTable result = _dataUtility.GetDataTableSP("sp_ManageBannerSlider", parameters);
+
+                if (result != null && result.Rows.Count > 0)
+                {
+                    bannerIntro = _common.ConvertToModel<BannerSliderModel>(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                _common.SaveErrorMessage("GetBannerIntroOne", ex);
+            }
+            return bannerIntro;
+        }
+        public string ManageSlider(string Id,string ActionType)
+        {
+            string message = string.Empty;
+            try
+            {
+                SqlParameter[] parameters =
+                {
+                    new SqlParameter("@ActionType", ActionType),
+                    new SqlParameter("@Id", Convert.ToInt32(Id))
+                };
+
+                var  result = _dataUtility.ExecuteScalarSP("sp_ManageBannerSlider", parameters);
+                message = result != null ? result.ToString() : "Try Again !!!";
+            }
+            catch (Exception ex)
+            {
+                _common.SaveErrorMessage("ManageBanner",ex);
+            }
+            return message;
+        }
+
+
+
     }
 }

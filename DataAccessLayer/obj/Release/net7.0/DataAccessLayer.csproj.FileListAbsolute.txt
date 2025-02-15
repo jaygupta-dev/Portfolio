@@ -1,0 +1,13 @@
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\DataAccessLayer\bin\Release\net7.0\DataAccessLayer.deps.json
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\DataAccessLayer\bin\Release\net7.0\DataAccessLayer.dll
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\DataAccessLayer\bin\Release\net7.0\DataAccessLayer.pdb
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\DataAccessLayer\obj\Release\net7.0\DataAccessLayer.csproj.AssemblyReference.cache
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\DataAccessLayer\obj\Release\net7.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\DataAccessLayer\obj\Release\net7.0\DataAccessLayer.AssemblyInfoInputs.cache
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\DataAccessLayer\obj\Release\net7.0\DataAccessLayer.AssemblyInfo.cs
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\DataAccessLayer\obj\Release\net7.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\DataAccessLayer\obj\Release\net7.0\DataAccessLayer.sourcelink.json
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\DataAccessLayer\obj\Release\net7.0\DataAccessLayer.dll
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\DataAccessLayer\obj\Release\net7.0\refint\DataAccessLayer.dll
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\DataAccessLayer\obj\Release\net7.0\DataAccessLayer.pdb
+D:\JAYANENDRA GUPTA\STUDY MATERIALSsss\Portfolio\Portfolio\DataAccessLayer\obj\Release\net7.0\ref\DataAccessLayer.dll
